@@ -1,0 +1,190 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.top-container{
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: 50px;
+    background-color: rgb(245, 191, 191);
+}
+.logo{
+    background-color: rgb(197, 156, 79);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar{
+    background-color: rgb(65, 68, 61);
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar ul li{
+   padding: 0 1rem;
+   display: inline;
+   text-align: center;
+   background-color: red;
+}
+
+.log-in{
+    background-color: rgb(72, 167, 59);
+    border: 2px solid black; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+button{
+    border: transparent;
+    background-color: aliceblue;
+    text-transform: uppercase;
+    margin: 0 10px;
+    padding: 4px 8px;
+    transition: 1s all ease;
+    border-radius: 10px;
+}
+
+button:hover{
+    border-bottom: 2px solid red;
+    background-color: blue;
+
+}
+
+ .container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 300px 200px 100px 100px 200px 100px;
+    grid-template-areas: 
+    'main main'
+    'sidebar info'
+    'sidebar info'
+    'ads ads'
+    'testimonials testimonials'
+    'footer footer'
+    ;
+    background-color: red;
+    grid-gap: 10px;
+}
+
+.main{
+    grid-area: main;
+    background-color: aqua;
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(12, 49, 49);
+    border: 1px solid rgb(151, 131, 131);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.info{
+    grid-area: info;
+    background-color: rgb(75, 49, 223);
+    border: 1px solid rgb(63, 39, 39);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ads{
+    grid-area: ads;
+    background-color: rgb(149, 155, 155);
+    border: 1px solid rgb(8, 8, 8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.testimonials{
+    grid-area: testimonials;
+    background-color: rgb(63, 18, 88);
+    border: 1px solid red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer{
+    display: grid;
+    grid-area: footer;
+    grid-template-columns: 1fr 1fr 1fr;    
+    background-color: rgb(119, 85, 126);
+    height: 200px;grid-gap:10px 
+}
+.col-3{
+    background-color: rgb(197, 69, 69);
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@media  screen and (max-width: 600px) {
+    .top-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto; 
+        grid-template-areas: 
+        'logo log-in'
+        'navbar navbar'
+        ;
+        background-color: rgb(245, 191, 191);
+    }
+    .navbar{
+        grid-area: navbar;
+    }
+    .logo{
+        grid-area: logo ;
+    }
+    .log-in{
+        grid-area: log-in;
+    }
+    .container{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 300px 200px 100px 100px 200px 100px;
+        grid-template-areas: 
+        'main'
+        'info'
+        'sidebar'
+        'ads'
+        'testimonials'
+        'footer'
+        ;
+        background-color: red;
+        grid-gap: 10px;
+    }
+    .footer{
+        display: block;   
+        background-color: rgb(119, 85, 126); 
+    }
+    
+}
+@media  screen and (max-width: 800px) {
+    .top-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr auto; 
+        grid-template-areas: 
+        'logo log-in'
+        'navbar navbar'
+        ;
+        background-color: rgb(245, 191, 191);
+    }
+    .navbar{
+        grid-area: navbar;
+    }
+    .logo{
+        grid-area: logo ;
+    }
+    .log-in{
+        grid-area: log-in;
+    }
+    
+}
